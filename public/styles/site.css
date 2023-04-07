@@ -114,3 +114,93 @@ main {
     text-align: left;
     width: 35%;
 }
+
+.testemonials-container {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5vw; 
+    margin-bottom: 5vh; 
+}
+
+#testemonials h1{
+    text-align: center;
+    padding: 5rem; 
+}
+
+.testemonial{
+    display: flex; 
+}
+
+.testemonial-info {
+    padding: 1rem; 
+    width: 80%;  
+}
+
+.testemonial img {
+    height: 150px; 
+    width: 150px; 
+    border-radius: 50%;
+}
+
+#contact-form {
+    height: 50vh; 
+    margin-bottom: 10vh; 
+}
+
+#contact-form h1 {
+    text-align: center;
+}
+
+.grooming-landing-container {
+    display: flex; 
+}
+
+.grooming-info {
+    padding-left: 2vw; 
+}
+
+.grooming-info h1 {
+    font-size: 4rem; 
+}
+
+.grooming-info h3{
+    width: 80%; 
+    margin: 5vh 0; 
+}
+
+.grooming-services-container h2 {
+    text-align: center;
+    font-size: 2rem; 
+}
+
+.services-container {
+    margin: auto; 
+}
+
+form {
+    display: flex; 
+    flex-direction: column;
+    margin-left: 30vw; 
+    margin-top: 5vh; 
+}
+
+label {
+    font-size: 1.5rem; 
+}
+
+input {
+    width: 40%;
+    margin-bottom: 2vh;  
+    padding: 0.3rem ;
+}
+
+textarea {
+    width: 40%;
+    resize: none; 
+}
+
+footer {
+    display: flex; 
+    justify-content: space-evenly;
+    padding: 20vh 0; 
+}
