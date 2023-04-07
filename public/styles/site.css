@@ -85,3 +85,13 @@ main {
 .location-info h4 {
     font-size: 1.4rem; 
 }
+
+#location-hours-container h3{
+    text-align: center;
+}
+
+.location-info-container {
+    display: flex; 
+    justify-content: center;
+    gap: 25vw; 
+}
