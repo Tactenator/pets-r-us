@@ -95,3 +95,22 @@ main {
     justify-content: center;
     gap: 25vw; 
 }
+
+#dog-container {
+    padding: 2rem; 
+    display: flex; 
+    justify-content: center;
+    gap: 20vw; 
+    background-color: rgb(14 165 233);
+}
+
+#dog-container h1 {
+    font-size: 3rem; 
+    margin-bottom: 3rem; 
+    margin-left: 10vw; 
+}
+
+.dotw-details {
+    text-align: left;
+    width: 35%;
+}
