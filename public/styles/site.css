@@ -10,6 +10,7 @@ nav {
     width: 100%; 
     padding: 2rem;  
     z-index: 1;
+    background: rgb(14 165 233);
 }
 
 .links {
@@ -21,7 +22,7 @@ nav {
 .links a {
     font-size: 1.5rem; 
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-weight: bold; 
     transition: 0.3s; 
 }
@@ -64,6 +65,7 @@ main {
     margin-top: 100vh; 
     margin-left: 10vw;  
     gap: 10vw; 
+     
 }
 
 .location-info {
@@ -86,8 +88,14 @@ main {
     font-size: 1.4rem; 
 }
 
+#location-hours-container {
+    margin-bottom: 5vh; 
+    padding: 5vh 0; 
+}
+
 #location-hours-container h3{
     text-align: center;
+    font-size: 3rem; 
 }
 
 .location-info-container {
@@ -96,12 +104,26 @@ main {
     gap: 25vw; 
 }
 
-#dog-container {
+.hours h2 {
     padding: 2rem; 
+    font-size: 2rem; 
+}
+
+.hours ul {
+    list-style: none;
+}
+
+.hours ul li {
+    font-size: 1.5rem; 
+}
+
+#dog-container {
+    padding: 4rem; 
     display: flex; 
     justify-content: center;
     gap: 20vw; 
     background-color: rgb(14 165 233);
+    color: #fff; 
 }
 
 #dog-container h1 {
@@ -110,25 +132,43 @@ main {
     margin-left: 10vw; 
 }
 
+#dog-container img {
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px black; 
+}
+
 .dotw-details {
     text-align: left;
     width: 35%;
 }
 
+.dotw-details h3 {
+    font-size: 2rem; 
+}
+
+#testemonials {
+    background-image: url('../images/testemonials-bg.png');
+    background-size: cover; 
+}
+
 .testemonials-container {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem; 
     padding: 5vw; 
-    margin-bottom: 5vh; 
 }
 
 #testemonials h1{
     text-align: center;
-    padding: 5rem; 
+    padding: 3rem; 
+    font-size: 4rem; 
+    color: #000;
 }
 
 .testemonial{
     display: flex; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    background-color: #fff;
 }
 
 .testemonial-info {
@@ -142,9 +182,9 @@ main {
     border-radius: 50%;
 }
 
-#contact-form {
-    height: 50vh; 
-    margin-bottom: 10vh; 
+#contact-form { 
+    padding: 5rem; 
+    background-color: #ececec; 
 }
 
 #contact-form h1 {
@@ -153,6 +193,7 @@ main {
 
 .grooming-landing-container {
     display: flex; 
+    background-color: #ececec;
 }
 
 .grooming-info {
@@ -160,7 +201,7 @@ main {
 }
 
 .grooming-info h1 {
-    font-size: 4rem; 
+    font-size: 4rem;
 }
 
 .grooming-info h3{
@@ -168,24 +209,34 @@ main {
     margin: 5vh 0; 
 }
 
-.grooming-services-container h2 {
-    text-align: center;
-    font-size: 2rem; 
+.grooming-services-container{
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
 }
 
+.grooming-services-container h2 { 
+    font-size: 2rem; 
+    text-align: center;
+}
 .services-container {
-    margin: auto; 
+    margin-top: 5vh;
+}
+
+td{
+    font-size: 2rem; 
 }
 
 form {
     display: flex; 
     flex-direction: column;
-    margin-left: 30vw; 
+    align-items: center;
     margin-top: 5vh; 
 }
 
 label {
     font-size: 1.5rem; 
+    width: 40%; 
 }
 
 input {
@@ -202,5 +253,8 @@ textarea {
 footer {
     display: flex; 
     justify-content: space-evenly;
-    padding: 20vh 0; 
+    align-items: center;
+    color: #fff; 
+    padding: 10vh 0; 
+    background: rgb(14 165 233);
 }
