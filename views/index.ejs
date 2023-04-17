@@ -1,23 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/site.css">
-    <title>Pets-R-Us</title>
-</head>
+<%- include('./partials/header.ejs') %>
 <body>
-    <nav>
-        <div class="links">
-            <a href="/">Home</a>
-            <a href="/boarding">Boarding</a>
-            <a href="/grooming">Grooming</a>
-            <a href="/training">Training</a>
-            <a href="/registration">Registration</a>
-            <a href="/customers">Customer List</a>
-        </div>
-    </nav>
+
+    <%- include('./partials/nav.ejs') %>
+
     <main>
         <img class="landing-img" src="/images/landing.jpg" alt="A person and a cat reaching towards each other" />
         <div class="landing-container">

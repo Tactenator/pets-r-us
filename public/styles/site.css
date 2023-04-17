@@ -250,6 +250,68 @@ textarea {
     resize: none; 
 }
 
+#trainer-container {
+    padding: 5vh 5vw; 
+}
+
+#trainer-container h1 {
+    text-align: center;
+    margin-bottom: 5vh; 
+}
+
+.trainer-info-container {
+    display: flex; 
+    justify-content: space-evenly;
+    gap: 5vw; 
+}
+
+.trainer-info-container img {
+    width: 100%; 
+    height: auto;   
+}
+
+.trainer-info p{
+    width: 100%;
+    text-align: center;
+}
+
+#pricing-container {
+    background:#ececec;
+    padding: 5vh 10vw; 
+}
+
+#pricing-container h1 {
+    text-align: center;
+    margin-bottom: 5vh; 
+}
+
+#prices-container {
+    display: flex; 
+    justify-content: center;
+    gap: 10vw; 
+    margin-bottom: 5vh; 
+    
+}
+
+#prices-container h1 {
+    margin-bottom: 3vh; 
+}
+
+#prices-container p {
+    margin-bottom: 1vh; 
+    font-size: 1.3rem;
+}
+
+#prices-container h2 {
+    text-align: center;
+}
+
+.price-info {
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 3vh 3vw; 
+}
+
 footer {
     display: flex; 
     justify-content: space-evenly;

@@ -15,3 +15,11 @@ app.get('/', (req, res) => {
 app.get('/grooming', (req, res) => {
     res.render('grooming')
 })
+
+app.get('/boarding', (req, res) => {
+    res.render('boarding')
+})
+
+app.get('/training', (req, res) => {
+    res.render('training')
+})
