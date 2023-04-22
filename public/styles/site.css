@@ -5,6 +5,7 @@
  
 }
 
+
 nav {
     position: relative; 
     width: 100%; 
@@ -240,7 +241,7 @@ label {
 }
 
 input {
-    width: 40%;
+    width: 100%;
     margin-bottom: 2vh;  
     padding: 0.3rem ;
 }

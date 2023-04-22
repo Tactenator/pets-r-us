@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 let customerSchema = new mongoose.Schema({
-    customerID: 
+    "customerID":
     { 
         type: String, 
         required: true, 
         unique: true 
     },
-    email: 
+    "email": 
     {
         type: String, 
         required: true,
