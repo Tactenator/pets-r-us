@@ -313,6 +313,27 @@ textarea {
     padding: 3vh 3vw; 
 }
 
+#registration {
+    padding: 5vh 5vw; 
+}
+
+.center-text {
+    text-align: center;
+}
+
+.form {
+    margin-bottom: 10vh; 
+}
+
+.btn {
+    padding: 2vh 5vw; 
+    background: rgb(14 165 233); 
+    color: #fff; 
+    font-size: 1.2rem; 
+    border: none; 
+    border-radius: 15px; 
+}
+
 footer {
     display: flex; 
     justify-content: space-evenly;
