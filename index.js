@@ -49,6 +49,10 @@ app.get('/registration', (req, res) => {
     res.render('registration')
 })
 
+app.get('/customers', (req, res) => {
+    res.render('customers')
+})
+
 app.post('/customers', async (req, res) => {
 
     const { customerID, email } = req.body; 

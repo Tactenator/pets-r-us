@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <main>
+        <div id="customer-container">
+
+        </div>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
+<script>
+    addEventListener("DOMContentLoaded", (e) => {
+
+        async function fetchData() {
+            const response = await fetch('https://localhost:4000/customers')
+            const data = response.json()
+            return data; 
+        }
+
+        const data = fetchData()
+        console.log(data)
+    });
+</script>
