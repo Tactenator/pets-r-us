@@ -32,10 +32,6 @@ nav {
     text-decoration: underline; 
 }
 
-main {
-    height: 100vh; 
-    width: auto; 
-}
 
 .landing-container {
     position: absolute; 
@@ -338,6 +334,32 @@ textarea {
 .btn:hover {
     cursor: pointer; 
     background: rgba(14, 164, 233, 0.825)
+}
+
+#customer-container {
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 25vh; 
+    gap: 10vw;
+    padding: 10vh 10vw; 
+}
+
+.table {
+    height: 20vh; 
+    width: auto; 
+}
+
+.table tbody tr th {
+    font-size: 2rem;
+    background: rgb(14 165 233);
+    color: white; 
+    padding: 1vh 5vw;  
+}
+
+.table tbody tr td {
+    text-align: center;
+    background: #ececec; 
+    padding: 2vh 2vw; 
 }
 
 footer {

@@ -4,23 +4,47 @@
 <body>
     <%- include('./partials/nav.ejs') %>
     <main>
+        <h1 style="text-align: center;">Our Customers</h1>
         <div id="customer-container">
-
+            <img src="/images/customers.jpg" alt="Guy hanging out with his dogs">
+            <% if(customers.length > 0) { %>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>Customer ID</th>
+                            <th>Email</th>
+                        </tr>
+                        <% customers.forEach(function(customers) { %>
+                        <tr>
+                            <td>
+                                <%= customers.customerID %>
+                            </td>
+                            <td>
+                                <%= customers.email %>
+                            </td>
+                        </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+                <% } else { %>
+                <h3>We need more customers!</h3>
+                <% } %>
         </div>
     </main>
     <%- include('./partials/footer.ejs') %>
 </body>
 </html>
-<script>
+<!-- <script>
     addEventListener("DOMContentLoaded", (e) => {
 
         async function fetchData() {
             const response = await fetch('https://localhost:4000/customers')
-            const data = response.json()
+            const data = await response.json()
+            console.log(data)
             return data; 
         }
 
         const data = fetchData()
-        console.log(data)
+      
     });
-</script>
+</script> -->

@@ -49,8 +49,18 @@ app.get('/registration', (req, res) => {
     res.render('registration')
 })
 
+async function getCustomers() {
+    const Customers = await Customer.find({}); 
+    return Customers; 
+}
+
 app.get('/customers', (req, res) => {
-    res.render('customers')
+    getCustomers()
+    .then(function(foundCustomers) {
+        res.render('customers', {
+            customers: foundCustomers
+        })
+    })
 })
 
 app.post('/customers', async (req, res) => {
