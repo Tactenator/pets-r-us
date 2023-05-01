@@ -23,7 +23,7 @@
                             <input class="input" type="text" name="customerID" id="email" required autofocus>
                         </div>
                         <div class="form-field">
-                            <label for="services">Services:</label>
+                            <label for="services">Services:</label><br />
                             <select name="services" id="services" class="drop-down-menu" required>
                                 <% services.forEach(function(item) {    %>
                                     <option value="'<%= item.value %>'"><%= item.text %></option>

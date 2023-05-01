@@ -55,6 +55,10 @@ nav {
     height: 100%;   
 }
 
+#contact-form form input {
+    width: 40%; 
+}
+
 #location-container { 
     display: flex; 
     justify-content: center;
@@ -360,6 +364,17 @@ textarea {
     text-align: center;
     background: #ececec; 
     padding: 2vh 2vw; 
+}
+
+.form-field {
+    width: 30%; 
+}
+
+select {
+    padding: 1vh 3vw; 
+    margin-bottom: 6vh; 
+    background: white; 
+    
 }
 
 footer {
