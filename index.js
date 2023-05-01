@@ -2,8 +2,10 @@ const express = require ('express')
 const mongoose = require('mongoose');
 require('dotenv').config({path:__dirname+'/.env'});
 const Customer = require('./models/customer')
+const Appointment = require('./models/appointments')
 const morgan = require('morgan');
 const cors = require('cors')
+const fs = require('fs')
 
 
 const PORT = process.env.PORT || 3000; 
@@ -70,6 +72,30 @@ app.post('/customers', async (req, res) => {
     try{
         const customer =  await Customer.create({ customerID, email })
         res.status(200).json(customer);
+    }
+    catch (error) {
+        res.status(400).json({ error: error.message })
+    }
+})
+
+app.get('/appointment', (req, res) => {
+    let file = fs.readFileSync('./public/data/services.json');
+    let appointments = JSON.parse(file);
+
+    console.log(appointments)
+
+    res.render('appointment', {
+        services: appointments
+    })
+})
+
+app.post('/appointment', async (req, res) => {
+
+    const { firstName, lastName, email, service } = req.body; 
+
+    try{
+        const appointment =  await Appointment.create({ firstName, lastName, email, service })
+        res.status(200).json(appointment);
     }
     catch (error) {
         res.status(400).json({ error: error.message })

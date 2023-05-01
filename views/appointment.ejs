@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
+    <section id="registration">
+        <h1 class="center-text">Make an Appointment</h1>
+    
+        <div class="card center-div">
+            <div class="card-title"></div>
+            <div class="card-content">
+                <div class="form">
+                    <form>
+                        <div class="form-field">
+                            <label for="firstName">First Name:</label><br />
+                            <input class="input" type="text" name="customerID" id="firstName" required autofocus>
+                        </div>
+                        <div class="form-field">
+                            <label for="lastName">Last Name:</label><br />
+                            <input class="input" type="text" name="email" id="lastName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email:</label><br />
+                            <input class="input" type="text" name="customerID" id="email" required autofocus>
+                        </div>
+                        <div class="form-field">
+                            <label for="services">Services:</label>
+                            <select name="services" id="services" class="drop-down-menu" required>
+                                <% services.forEach(function(item) {    %>
+                                    <option value="'<%= item.value %>'"><%= item.text %></option>
+                                <%  }) %>
+                            </select>
+                        </div>
+    
+                        <div class="form-field">
+                            <input type="submit" value="Create Appointment" class="btn btn-primary full-width">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+    </section>
+    
+    <%- include('./partials/footer.ejs') %>
+</html>
+<script>
+    const form = document.querySelector('form')
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value; 
+        const email = document.getElementById('email').value;
+        const services = document.getElementById('services')
+
+        const servicesValue = services.options[services.selectedIndex].value; 
+
+        async function handleSubmit() {
+            const appointment = { firstName: firstName, lastName: lastName, email: email, service: servicesValue }
+
+            const response = await fetch('http://localhost:4000/appointment', {
+                method: 'POST', 
+                body: JSON.stringify(appointment),
+                headers: {
+                'Content-Type': 'application/json',
+                },
+            })
+
+            const json = await response.json();
+
+            if(!response.ok) {
+                console.log('The following error occurred: ' + json.error)
+            }
+            if(response.ok){
+                console.log('New Appointment Added')
+            }
+        }
+
+        handleSubmit()
+
+    })
+</script>
+
+
