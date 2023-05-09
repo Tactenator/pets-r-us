@@ -377,12 +377,7 @@ select {
     
 }
 
-#search-results {
-    display: flex; 
-    align-items: center;
-    flex-direction: column; 
-    margin-left: auto;  
-}
+
 
 footer {
     display: flex; 
