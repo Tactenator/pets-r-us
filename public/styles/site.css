@@ -350,7 +350,7 @@ textarea {
 
 .table {
     height: 20vh; 
-    width: auto; 
+    margin: auto;  
 }
 
 .table tbody tr th {
@@ -375,6 +375,13 @@ select {
     margin-bottom: 6vh; 
     background: white; 
     
+}
+
+#search-results {
+    display: flex; 
+    align-items: center;
+    flex-direction: column; 
+    margin-left: auto;  
 }
 
 footer {

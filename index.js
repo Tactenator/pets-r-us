@@ -78,13 +78,11 @@ app.post('/customers', async (req, res) => {
     }
 })
 
-app.get('/appointment', (req, res) => {
+app.get('/booking', (req, res) => {
     let file = fs.readFileSync('./public/data/services.json');
     let appointments = JSON.parse(file);
 
-    console.log(appointments)
-
-    res.render('appointment', {
+    res.render('booking', {
         services: appointments
     })
 })
@@ -100,6 +98,16 @@ app.post('/appointment', async (req, res) => {
     catch (error) {
         res.status(400).json({ error: error.message })
     }
+})
+
+async function getAppointments() {
+    const Appointments = await Appointment.find({}); 
+    console.log(Appointments)
+    return Appointments; 
+}
+
+app.get('/my-appointments', (req, res) => {
+    res.render('my-appointments')
 })
 
 mongoose.connect(MONGO)
